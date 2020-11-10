@@ -17,6 +17,7 @@ table.phoneList th {
   background-color: #666;
   color: yellowgreen;
 }
+
 table.phoneList input {
   padding: 10px;
   outline: none;

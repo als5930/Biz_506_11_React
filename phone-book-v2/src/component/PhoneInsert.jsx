@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import "../css/PhoneInsert.css";
 
 const PhoneInsert = ({ insertPhoneBook }) => {
-  const [name, setname] = useState("");
+  const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
   const save = (e) => {
     insertPhoneBook(name, number);
-    setname("");
+    setName("");
     setNumber("");
   };
   const inputName = (e) => {
-    setname(e.target.value);
+    setName(e.target.value);
   };
   const inputNumber = (e) => {
     setNumber(e.target.value);
@@ -23,12 +23,12 @@ const PhoneInsert = ({ insertPhoneBook }) => {
         placeholder="이름을 입력하세요"
         value={name}
         onChange={inputName}
-      ></input>
+      />
       <input
         placeholder="전화번호를 입력하세요"
         value={number}
         onChange={inputNumber}
-      ></input>
+      />
       <button onClick={save} type="button">
         저장
       </button>
