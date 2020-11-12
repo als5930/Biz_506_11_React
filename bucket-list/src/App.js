@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>&#10032; MY BUCKET LIST &#10032;</h2>
+        <h2>&#128746; MY BUCKET LIST&#128746;</h2>
       </header>
       <BucketMain />
     </div>
