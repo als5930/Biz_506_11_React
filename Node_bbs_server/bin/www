@@ -12,6 +12,7 @@ var http = require("http");
  * Get port from environment and store in Express.
  */
 
+// 포트값 세팅
 var port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 
@@ -19,6 +20,7 @@ app.set("port", port);
  * Create HTTP server.
  */
 
+// 서버 생성
 var server = http.createServer(app);
 
 /**
@@ -83,4 +85,6 @@ function onListening() {
   var addr = server.address();
   var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   console.log("Listening on " + bind);
+
+  // 서버를 만들고 사용자의 응답을 기다리는 (www) 파일이다
 }

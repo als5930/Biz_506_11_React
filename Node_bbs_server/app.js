@@ -3,12 +3,15 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+// ./models/index.js 파일을 require하라
+const seqDB = require("./models").sequelize;
+seqDB.sync();
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const api = require("./routes/api");
 
-// nodejs를 express framework로 감싼 서버 프로그램
+// nodejs를 express framework로 감싼 서버 프로젝트 생성
 const app = express();
 
 // view engine setup
