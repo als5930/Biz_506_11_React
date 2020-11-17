@@ -22,7 +22,6 @@ class BBsList extends Component {
             <th>작성자 &#9834;</th>
             <th>작성일자 &#9834;</th>
             <th>제목 &#9834;</th>
-            <th>내용 &#9834;</th>
             <th>&hearts;</th>
           </tr>
         </thead>
