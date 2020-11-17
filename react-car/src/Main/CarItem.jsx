@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import Moment from "react-moment";
 
 class CarItem extends Component {
-  onClick = (e, id) => {
-    const { onDeleteItem } = this.props;
-    if (e.target.className === "delete-item") {
-      if (window.confirm("삭제할까요?")) {
-        onDeleteItem(id);
-        return false;
-      }
-    }
-  };
+  // onClick = (e, id) => {
+  //   const { onDeleteItem } = this.props;
+  //   if (e.target.className === "delete-item") {
+  //     if (window.confirm("삭제할까요?")) {
+  //       onDeleteItem(id);
+  //       return false;
+  //     }
+  //   }
+  // };
 
   render() {
     const { car, index } = this.props;

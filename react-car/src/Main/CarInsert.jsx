@@ -16,14 +16,23 @@ class CarInsert extends Component {
   };
   onCreate = (e) => {
     const { onCreate } = this.props;
+    const {
+      c_id,
+      c_weiter,
+      c_date_start,
+      c_date_end,
+      c_road,
+      c_cost,
+      c_spot,
+    } = this.state;
     onCreate({
-      c_weiter: this.state.c_weiter,
-      c_date_start: this.state.c_date_start,
-      c_date_end: this.state.c_date_end,
-      c_road: this.state.c_road,
-      c_cost: this.state.c_cost,
-      c_spot: this.state.c_spot,
-      c_id: this.state.c_id,
+      c_weiter: c_weiter,
+      c_date_start: c_date_start,
+      c_date_end: c_date_end,
+      c_road: c_road,
+      c_cost: c_cost,
+      c_spot: c_spot,
+      c_id: c_id,
     });
   };
 
