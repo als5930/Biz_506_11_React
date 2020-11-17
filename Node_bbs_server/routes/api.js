@@ -1,7 +1,6 @@
 // ES 2015 이상의 문법
 // import express from "express";
 // 현재 nodejs가 지원하는 문법
-
 const express = require("express");
 const router = express.Router();
 // 폴더에 index.js 파일이 있을 경우
@@ -9,20 +8,24 @@ const router = express.Router();
 const { bbsDao } = require("../models");
 
 router.get("/", (req, res) => {
-  //   res.send("반갑습니다.");
-  res.render("index", { date: "date" });
+  // res.send("반갑습니다");
+  res.render("index", { data: "data" });
 });
 
 router.get("/bbsList", (req, res) => {
   const list = [
-    { id: 0, writer: "홍길동", subject: "게시판" },
-    { id: 1, writer: "이몽룡", subject: "게시판" },
-    { id: 2, writer: "성춘향", subject: "게시판" },
+    { id: 0, write: "홍기동", subject: "게시판" },
+    { id: 1, write: "이몽룡", subject: "게시판" },
+    { id: 2, write: "성춘향", subject: "게시판" },
   ];
-
-  bbsDao.findAll({ order: [["b_date_time", "DESC"]] }).then((bbsList) => {
-    res.json(bbsList);
-  });
+  bbsDao
+    .findAll({ order: [["b_date_time", "DESC"]] })
+    .then((bbsList) => {
+      res.json(bbsList);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
   // res.json(list);
 });
 
@@ -31,9 +34,8 @@ router.get("/bbsList", (req, res) => {
  * ?변수=값 : req.query.변수
  * /:변수 : req.params.변수
  * form의 input tag에서 name으로 설정된 변수 : req.body.변수
- * ajax를 통해서 전달받은 데이터: req.body.변수
+ * ajax를 통해서 전달받은 데이터 : req.body.변수
  */
-
 router.post("/insert", (req, res) => {
   bbsDao
     .create({
@@ -62,7 +64,6 @@ router.get("/view", (req, res) => {
       res.json(result);
     });
 });
-
 // localhost:3000/api/view/10
 router.get("/view/:id", (req, res) => {
   const b_id = req.params.id;
@@ -75,8 +76,9 @@ router.get("/view/:id", (req, res) => {
     });
 });
 
-router.post("/update/:id", (req, res) => {
-  const b_id = req.params.id;
+router.post("/update", (req, res) => {
+  // const b_id = req.params.id;
+  console.log("Update", req.body);
   bbsDao
     .update(
       {
@@ -98,7 +100,7 @@ router.delete("/delete/:id", (req, res) => {
   const b_id = req.params.id;
   bbsDao
     .destroy({
-      where: { b_id: b_id },
+      where: { b_id: Number(b_id) },
     })
     .then((result) => {
       res.redirect("/api/bbsList");

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Moment from "react-moment";
 import axios from "axios";
-class BBSItem extends Component {
+
+class BBsItem extends Component {
   handleClick = (id) => {
     const { fetchBBs } = this.props;
-
     if (window.confirm("정말 삭제합니다")) {
       axios
         .delete(`http://localhost:5000/api/delete/${id}`)
@@ -41,4 +41,5 @@ class BBSItem extends Component {
     );
   }
 }
-export default BBSItem;
+
+export default BBsItem;
