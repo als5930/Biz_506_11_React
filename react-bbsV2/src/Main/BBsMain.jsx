@@ -102,7 +102,7 @@ class BBsMain extends Component {
     return (
       <div>
         <BBsInsert bbsSave={bbsSave} bbsData={bbsData} />
-        <p>{isFetch ? "데이터가져오는중..." : "완료"}</p>
+        <p className="p1">{isFetch ? "데이터가져오는중..." : "완료"}</p>
         <BBsList
           bbsList={bbsList}
           fetchBBs={fetchBBsList}

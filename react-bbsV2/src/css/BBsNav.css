@@ -1,6 +1,6 @@
 nav.main-nav {
   margin: 0;
-  background-color: blue;
+  background-color: pink;
 }
 nav.main-nav ul {
   display: flex;
@@ -18,6 +18,6 @@ nav.main-nav .nav-link {
   margin: 0;
 }
 nav.main-nav .nav-link:hover {
-  color: blue;
+  color: purple;
   background-color: #ddd;
 }

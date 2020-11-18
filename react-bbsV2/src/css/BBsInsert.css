@@ -31,13 +31,14 @@
 }
 .input-form button {
   flex: 1;
-  background-color: pink;
-  color: black;
+  background-color: purple;
+  color: white;
   padding: 12px 25px;
   display: inline-block;
   border: none;
   outline: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 .input-form button:hover {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);

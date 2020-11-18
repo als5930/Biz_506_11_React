@@ -44,7 +44,7 @@ function App() {
         <Route exact path="/notice" component={BBSAdmin} />
       </Router>
       <footer className="footer">
-        <address>CopyRigh &copy; dhdlqkqh2003@naver.com</address>
+        <address>CopyRigh &copy; als3478@naver.com</address>
       </footer>
     </div>
   );

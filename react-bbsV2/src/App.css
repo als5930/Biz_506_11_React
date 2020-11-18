@@ -40,11 +40,16 @@
   }
 }
 .footer {
-  background-color: #ddd;
+  background-color: pink;
   text-align: center;
   padding: 10px;
 }
+
 p,
 h3 {
   background-color: skyblue;
+}
+
+.p1 {
+  background-color: plum;
 }
