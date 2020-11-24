@@ -1,5 +1,5 @@
 import "./App.css";
-import BucketMain from "./Main/BuckMain";
+import TodoMain from "./component/TodoMain";
 
 function App() {
   return (
