@@ -33,11 +33,18 @@ class carMain extends Component {
     this.setState({ carList: newCarList });
   };
 
+  onDeleteItem = (id) => {
+    const deleteCarList = this.state.carList.filter((car) => {
+      if (car.id !== Number(id)) return car;
+    });
+    this.setState({ carList: deleteCarList });
+  };
+
   render() {
     const { carList } = this.state;
     return (
       <div>
-        <CarInsert onCreate={this.onCreate} />
+        <CarInsert onCreate={this.onCreate} onDeleteItem={this.onDeleteItem} />
         <CarList carList={carList} />
       </div>
     );
