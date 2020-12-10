@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import GuguInput from "./main/GuguInput";
-import GuguList1 from "./main/GuguList1";
-import "./main/GuguList2";
-import GuguList2 from "./main/GuguList2";
+import GuguInput from "./Main/GuguInput";
+import GuguList1 from "./Main/GuguList1";
+import "./Main/GuguList2";
+import GuguList2 from "./Main/GuguList2";
 
 function App() {
   const divStyle = {

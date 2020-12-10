@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuguInput(props) {
+function GuguInput({ setNumberFunc }) {
   const style = {
     fontSize: "20px",
     padding: "5px",
@@ -21,5 +21,3 @@ function GuguInput(props) {
     </div>
   );
 }
-
-export default GuguInput;
